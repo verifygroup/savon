@@ -49,7 +49,7 @@ module Savon
 
       raise_expected_httpi_response! unless response.kind_of?(HTTPI::Response)
 
-      Response.new(response, @globals, @locals)
+      Multipart::Response.new(response, @globals, @locals)
     end
 
     private
